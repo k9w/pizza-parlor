@@ -9,6 +9,24 @@ function Pizza() {
   this.totalPrice = 0;
 }
 
+Pizza.prototype.chooseSize = function() {
+    switch (sizeChosen) {
+  case ("small"):
+    sizeChosen = 12;
+    price += 12;
+    break; 
+  case ("medium"):
+    sizeChosen = 18;
+    price += 18;
+    break; 
+  case ("large"):
+    sizeChosen = 24;
+    price += 24;
+    break;
+  default:
+    console.log("No size chosen.");
+  }
+}
 
 /* 
  * Allow just one topping for Minimum Viable Product. Can be expanded
@@ -35,25 +53,6 @@ Pizza.prototype.chooseToppings = function() {
     break;
   default:
     console.log("No topping chosen.");
-  }
-}
-
-Pizza.prototype.chooseSize = function() {
-    switch (sizeChosen) {
-  case ("small"):
-    sizeChosen = 12;
-    price += 12;
-    break; 
-  case ("medium"):
-    sizeChosen = 18;
-    price += 18;
-    break; 
-  case ("large"):
-    sizeChosen = 24;
-    price += 24;
-    break;
-  default:
-    console.log("No size chosen.");
   }
 }
 
