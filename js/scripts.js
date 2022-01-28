@@ -7,6 +7,10 @@ function Pizza() {
   this.price = 0;
 }
 
+Pizza.prototype.chooseToppings = function() {
+  this.toppings = [];
+}
+
 function functionName(parameter) {
   for (this, until, increment/decrement up/down by one) {
     

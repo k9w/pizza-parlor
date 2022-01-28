@@ -47,7 +47,7 @@ Describe: Pizza Object Constructor
 Test: "It should template a pizza with properties: topping, size, price."
 Code:
 function Pizza() {
-  this.topping = [];
+  this.toppings = [];
   this.size = 0;
   this.price = 0;
 }
@@ -55,9 +55,13 @@ Expected Output: A valid constructor with those properties.
 ```
 
 ```
-Describe: Initial Pizza Object from the Constructor
-Test: "It should ."
-Code:
+Describe: Choose topping
+Test: "It should return a list of chosen toppings."
+Code: 
+Pizza.prototype.chooseToppings = function() {
+  this.toppings = [];
+}
+Expected Output: A list of toppings chosen.
 ```
 
 ## Setup/Installation Requirements
