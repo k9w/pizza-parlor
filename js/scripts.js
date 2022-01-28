@@ -2,8 +2,10 @@
 /* Business Logic */
 
 function Pizza() {
-  this.size = 0;
-  this.toppings = [];
+  this.toppingOptions = ["cheese", "pepperoni", "artichoke", "anchovy"];
+  this.sizeOptions = ["cheese", "pepperoni", "artichoke", "anchovy"];
+  this.sizeChosen = 0;
+  this.toppingsChosen = [];
   this.totalPrice = 0;
 }
 
@@ -14,25 +16,50 @@ function Pizza() {
  */
 
 Pizza.prototype.chooseToppings = function() {
-  this.toppings = [];
-  switch (toppings) {
-  case ("cheese")
-    toppings.push("cheese");
-    price
+  switch (toppingsChosen) {
+  case ("cheese"):
+    toppingsChosen.push("cheese");
+    totalPrice += 5;
+    break;
+  case ("pepperoni"):
+    toppingsChosen.push("pepperoni");
+    totalPrice += 7;
+    break;
+  case ("artichoke"):
+    toppingsChosen.push("artichoke");
+    totalPrice += 7;
+    break;
+  case ("anchovy"):
+    toppingsChosen.push("anchovy");
+    totalPrice += 7;
+    break;
+  default:
+    console.log("No topping chosen.");
   }
 }
 
 Pizza.prototype.chooseSize = function() {
-  this.toppings = [];
-  switch (toppings) {
-  case ()
+    switch (sizeChosen) {
+  case ("small"):
+    sizeChosen = 12;
+    price += 12;
+    break; 
+  case ("medium"):
+    sizeChosen = 18;
+    price += 18;
+    break; 
+  case ("large"):
+    sizeChosen = 24;
+    price += 24;
+    break;
+  default:
+    console.log("No size chosen.");
   }
 }
 
 Pizza.prototype.calculatePrice = function() {
-  let toppingChosen = ;
-  let sizeChosen = ;
-  
+  console.log(toppingsChosen);
+  console.log(sizeChosen);
 }
 
 function functionName(parameter) {
