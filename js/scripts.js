@@ -18,11 +18,11 @@ function Pizza() {
 Pizza.prototype.chooseToppings = function() {
   switch (toppingsChosen) {
   case ("cheese"):
-    toppingsChosen.push("cheese");
+    toppingsResult.push("cheese");
     totalPrice += 5;
     break;
   case ("pepperoni"):
-    toppingsChosen.push("pepperoni");
+    toppingsResult.push("pepperoni");
     totalPrice += 7;
     break;
   case ("artichoke"):
