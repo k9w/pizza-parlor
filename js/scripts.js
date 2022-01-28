@@ -1,13 +1,11 @@
-/* Utility Logic */
-
-function () {
-  
-}
-
 
 /* Business Logic */
 
-Business
+function Pizza() {
+  this.topping = [];
+  this.size = 0;
+  this.price = 0;
+}
 
 function functionName(parameter) {
   for (this, until, increment/decrement up/down by one) {

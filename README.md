@@ -13,8 +13,8 @@
 
 ## Description
 
-_Welcome to my first independent project with Intermediate JavaScript as a student at
-[Epicodus](https://epicodus.com)!_
+_Welcome to my first independent project with Intermediate JavaScript
+as a student at [Epicodus](https://epicodus.com)!_
 
 [Here is the
 lesson](https://www.learnhowtoprogram.com/intermediate-javascript/object-oriented-javascript/object-oriented-javascript-independent-project)
@@ -44,10 +44,14 @@ thus far. It only outlines what the program is supposed to do.
 
 ```
 Describe: Pizza Object Constructor
-Test: "It should ."
+Test: "It should template a pizza with properties: topping, size, price."
 Code:
-Example Input: 
-Expected Output: 
+function Pizza() {
+  this.topping = [];
+  this.size = 0;
+  this.price = 0;
+}
+Expected Output: A valid constructor with those properties.
 ```
 
 ```
