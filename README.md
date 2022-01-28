@@ -1,4 +1,4 @@
-# _Independent project, Epicodus, Intermediate Javascript, Week 1
+# Independent project, Epicodus, Intermediate Javascript, Week 1
 
 #### Contributors
 
@@ -33,8 +33,28 @@ The Tests section outlines the tests as I implement them.
 NOTE: This section does not specify which features have been implemented
 thus far. It only outlines what the program is supposed to do.
 
+The following pseudocode describes my plan for how the web app will work.
 
 ```
+Business Logic
+
+Declare a pizza.
+Choose one topping from three or more options.
+Choose a size from three or more options.
+Calculate a total price based on prices for each topping and size.
+
+
+User Interface Logic
+
+Menu header
+
+Show radio buttons for
+ - Toppings with prices
+ - Sizes with prices
+
+Submit button
+
+Show final pizza with total price.
 
 ```
 

@@ -7,8 +7,20 @@ function Pizza() {
   this.price = 0;
 }
 
+Pizza.prototype.calculatePrice = function() {
+  
+}
+
+/* 
+ * Allow just one topping for Minimum Viable Product. Can be expanded
+ * later.
+ */
+
 Pizza.prototype.chooseToppings = function() {
   this.toppings = [];
+  switch (toppings) {
+  case ()
+  }
 }
 
 function functionName(parameter) {
