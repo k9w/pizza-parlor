@@ -43,16 +43,17 @@ thus far. It only outlines what the program is supposed to do.
 ### Tests
 
 ```
-Describe: 
-
+Describe: Pizza Object Constructor
 Test: "It should ."
-
 Code:
-
 Example Input: 
-
 Expected Output: 
+```
 
+```
+Describe: Initial Pizza Object from the Constructor
+Test: "It should ."
+Code:
 ```
 
 ## Setup/Installation Requirements
