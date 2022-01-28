@@ -38,9 +38,16 @@ The following pseudocode describes my plan for how the web app will work.
 ```
 Business Logic
 
-Declare a pizza.
-Choose one topping from three or more options.
-Choose a size from three or more options.
+Have a pizza declared when the user loads the page.
+Choose one topping from three or more options; and include the price.
+ - Cheese - $5
+ - Pepperoni - $7
+ - Artichoke - $9
+ - Anchovy - $8
+Choose a size from three or more options; and include the price..
+ - Small: 12 inch - $12
+ - Medium: 18 inch - $18
+ - Large: 24 inch - $24
 Calculate a total price based on prices for each topping and size.
 
 
