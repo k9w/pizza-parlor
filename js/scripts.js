@@ -81,14 +81,21 @@ function () {
 
 
 /* User Interface Logic */
-
 let pizza = new Pizza();
 
+function hideResult() {
+  $(".result").hide();
+}
+
 $(document).ready(function() {
-  $("").submit(function(event) {
+  $("form#questions").submit(function(event) {
     event.preventDefault();
-    const word = $("").val();
-    $("").text(function())
+    hideResult();
+    let sizeChoice = $("input:radio[name=sizeChoice]:checked").val();
+    let toppingsChoice = $("input:radio[name=toppingsChoice]:checked").val();
+    priceTheChoices(sizeChoice, toppingsChoice);
+    $(result).show();
+    document.getElementById("reset").onClick = hideResult;
   });
 });
 

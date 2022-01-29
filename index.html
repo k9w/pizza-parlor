@@ -13,8 +13,8 @@
 <body>
   <div class="container">
     <h1>Choose your Pizza</h1>
-    <p>What size would you like?</p>
-    <form id="">
+    <form id="questions">
+      <p>What size would you like?</p>
       <label>
         <input type="radio" name="sizeChoice" value="small">
 	Small
@@ -29,12 +29,31 @@
       </label>
       <br>
       <br>
-    <p>What topping would you like?</p>
-      <input type="radio" name="toppingsChoice" value="cheese"><br>
-      <input type="radio" name="toppingsChoice" value="cheese"><br>
-      <input type="radio" name="toppingsChoice" value="cheese"><br>
-      <input type="radio" name="toppingsChoice" value="cheese"><br>
+      <p>What topping would you like?</p>
+      <label>
+	<input type="radio" name="toppingsChoice" value="cheese">
+	Cheese
+      </label>
+      <label>
+	<input type="radio" name="toppingsChoice" value="Pepperoni">
+	Pepperoni
+      </label>
+      <label>
+	<input type="radio" name="toppingsChoice" value="Artichoke">
+	Artichokes
+      </label>
+      <label>
+	<input type="radio" name="toppingsChoice" value="Anchovy">
+	Anchovies
+      </label>
+      <br>
+      <br>
+      <button type="submit" class="btn">Submit</button>
+      <input type="reset" id="reset" class="btn">
     </form>
+    <div class="result">
+      Result
+    </div>
   </div>
 </body>
 </html>
