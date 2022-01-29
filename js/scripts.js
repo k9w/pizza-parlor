@@ -61,24 +61,6 @@ Pizza.prototype.calculatePrice = function() {
   console.log(sizeChosen);
 }
 
-function functionName(parameter) {
-  for (this, until, increment/decrement up/down by one) {
-    
-  }
-}
-
-function () {
-  if () {
-    
-  }
-  else if {
-    
-  }
-  else {
-    
-  }
-}
-
 
 /* User Interface Logic */
 let pizza = new Pizza();
