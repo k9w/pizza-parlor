@@ -87,6 +87,10 @@ function hideResult() {
   $(".result").hide();
 }
 
+function showResult() {
+  $(".result").show();
+}
+
 $(document).ready(function() {
   $("form#questions").submit(function(event) {
     event.preventDefault();
@@ -94,7 +98,6 @@ $(document).ready(function() {
     let sizeChoice = $("input:radio[name=sizeChoice]:checked").val();
     let toppingsChoice = $("input:radio[name=toppingsChoice]:checked").val();
     priceTheChoices(sizeChoice, toppingsChoice);
-    $(result).show();
     document.getElementById("reset").onClick = hideResult;
   });
 });
