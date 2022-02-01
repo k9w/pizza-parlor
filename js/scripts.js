@@ -1,46 +1,40 @@
-
 /* Business Logic */
 
 function Pizza() {
+  this.sizeOptions = ["small", "medium", "large"];
   this.toppingOptions = ["cheese", "pepperoni", "artichoke", "anchovy"];
-  this.sizeOptions = ["cheese", "pepperoni", "artichoke", "anchovy"];
   this.sizeChosen = 0;
   this.toppingsChosen = [];
   this.totalPrice = 0;
 }
 
 Pizza.prototype.chooseSize = function() {
-    switch (sizeChosen) {
+    switch (sizeOptions) {
   case ("small"):
     sizeChosen = 12;
-    price += 12;
+    totalPrice += 12;
     break; 
   case ("medium"):
     sizeChosen = 18;
-    price += 18;
+    totalPrice += 18;
     break; 
   case ("large"):
     sizeChosen = 24;
-    price += 24;
+    totalPrice += 24;
     break;
   default:
-    console.log("No size chosen.");
+    break;
   }
 }
 
-/* 
- * Allow just one topping for Minimum Viable Product. Can be expanded
- * later.
- */
-
 Pizza.prototype.chooseToppings = function() {
-  switch (toppingsChosen) {
+  switch (toppingOptions) {
   case ("cheese"):
-    toppingsResult.push("cheese");
+    toppingsChosen.push("cheese");
     totalPrice += 5;
     break;
   case ("pepperoni"):
-    toppingsResult.push("pepperoni");
+    toppingsChosen.push("pepperoni");
     totalPrice += 7;
     break;
   case ("artichoke"):
@@ -52,35 +46,28 @@ Pizza.prototype.chooseToppings = function() {
     totalPrice += 7;
     break;
   default:
-    console.log("No topping chosen.");
+    break;
   }
 }
 
-Pizza.prototype.calculatePrice = function() {
-  console.log(toppingsChosen);
-  console.log(sizeChosen);
+Pizza.prototype.orderPizza = function() {
+  function calculatePrice() {
+  }
 }
 
 
 /* User Interface Logic */
+
 let pizza = new Pizza();
-
-function hideResult() {
-  $(".result").hide();
-}
-
-function showResult() {
-  $(".result").show();
-}
 
 $(document).ready(function() {
   $("form#questions").submit(function(event) {
     event.preventDefault();
-    hideResult();
+    $("#result").empty();
     let sizeChoice = $("input:radio[name=sizeChoice]:checked").val();
     let toppingsChoice = $("input:radio[name=toppingsChoice]:checked").val();
-    priceTheChoices(sizeChoice, toppingsChoice);
-    document.getElementById("reset").onClick = hideResult;
+    $("#result").show();
+    $("#result").append(orderPizza(sizeChoice, toppingsChoice));
+    $("#result").append("Order placed!");
   });
 });
-
