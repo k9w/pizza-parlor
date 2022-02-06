@@ -1,11 +1,11 @@
 This plaintext document outlines my thought process on a re-write of
-this application's Business Logic. I expect the User Interface Logic
-to only marginally change. Refer to the Git commit history prior to
-Saturday February 5th 2022 for this app's first incarnation.
+this application's Business Logic and User Interface Logic. The UI
+Logic may only marginally change. Refer to the Git commit history
+prior to Saturday February 5th 2022 for this app's first incarnation.
 
 
 
-Business Logic
+APPLICATION GOALS
 
 
 Expected input:
@@ -24,6 +24,11 @@ Expected output:
 
 To achieve that, do this:
 
+
+
+BUSINESS LOGIC
+
+
 Define an object constructor Pizza with the following properties and
 possible values.
 
@@ -39,12 +44,21 @@ possible values.
  - Total Price: the value of 'size price' plus the value of 'topping price'
 
 
-Define a method calculateTotalPrice with parameters sizeChoice and
-toppingChoice, from the UI Logic below, to calculate the total price.
+Define a method calculateTotalPrice.
+
+Input parameters from the UI Logic: sizeChoice and toppingChoice
+
+ - Find the sizePrice based on the sizeChoice.
+
+ - Find the toppingPrice based on the toppingChoice.
+
+ - Find the totalPrice from the sum of sizePrice and toppingPrice.
+
+ - Return the totalPrice.
 
 
 
-User Interface Logic
+HTML and CSS
 
 
 HTML shows the following to the user:
@@ -53,11 +67,11 @@ HTML shows the following to the user:
 
  - Ask what size is wanted.
  
- - Offer radio button for each size choice.
+ - Offer a radio button for each size choice.
 
  - Ask what topping is wanted.
 
- - Offer radio button for each topping choice.
+ - Offer a radio button for each topping choice.
 
  - Show submit and reset buttons.
 
@@ -67,19 +81,62 @@ HTML shows the following to the user:
 In CSS, initially hide the result tag.
 
 
-After the page has loaded, run the UI JavaScript below:
+
+USER INTERFACE LOGIC
+
+
+After the page has loaded, run the UI JavaScript code below:
 
 Run the code below on click of the 'submit' button.
 
  - Prevent the default of the form result appearing and then quickly
-   disappearing.
+   disappearing. This means keep the result displayed.
 
  - Empty the tag with id result.
 
- - Store the value of size choice.
+ - Store the value of sizeChoice from the radio button checked.
 
- - Store the value of topping choice.
+ - Store the value of toppingChoice from the radio button checked.
 
  - Call the calculateTotalPrice method, in our Business Logic above,
    and pass it the values of sizeChoice, and toppingChoice.
+
+ - Show the tag with id result.
+
+ - Append to the result tag: sizeChoice, toppingChoice, and
+   totalPrice.
+
+
+
+STRATEGY TO WRITE THE TESTS AND WRITE THE CODE
+
+
+Keep in mind this project uses manual tests, since we have not yet
+started learning automated testing with Jest for this Independent
+Project. Therefore I won't include the steps below of running the
+tests.
+
+A commit is assumed after each bullet point below.
+
+ - Test for the constructor and its properties.
+
+ - Code the constructor and its properties.
+
+ - Test for the method, its inputs, its actions, and its output.
+
+ - Code the method, its inputs, its actions, and its output.
+
+
+UI Logic does not need to be tested. HTML and CSS are not applicable
+to be tested.
+
+ - Code the UI Logic.
+
+ - Code the HTML and CSS.
+
+ - Manually test the result in the browser.
+
+ - If something doesn't work, repeat prior steps as applicable.
+
+ - Once everything works, submit the project in Epicenter.
 

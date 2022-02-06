@@ -18,8 +18,8 @@ as a student at [Epicodus](https://epicodus.com)!_
 
 [Here is the
 lesson](https://www.learnhowtoprogram.com/intermediate-javascript/object-oriented-javascript/object-oriented-javascript-independent-project)
-from [the curriculum](https://learnhowtoprogram.com) where I made this
-app on Friday January 28th 2022. Check out more of my work at:
+from [the curriculum](https://learnhowtoprogram.com) where I started
+this app on Friday January 28th 2022. Check out more of my work at:
 
  * https://github.com/k9w
 
@@ -30,44 +30,14 @@ The Tests section outlines the tests as I implement them.
 
 ### Specifications
 
-NOTE: This section does not specify which features have been implemented
-thus far. It only outlines what the program is supposed to do.
-
-The following pseudocode describes my plan for how the web app will work.
-
-```
-Business Logic
-
-Have a pizza declared when the user loads the page.
-Choose one topping from three or more options; and include the price.
- - Cheese - $5
- - Pepperoni - $7
- - Artichoke - $9
- - Anchovy - $8
-Choose a size from three or more options; and include the price..
- - Small: 12 inch - $12
- - Medium: 18 inch - $18
- - Large: 24 inch - $24
-Calculate a total price based on prices for each topping and size.
-
-
-User Interface Logic
-
-Menu header
-
-Show radio buttons for
- - Toppings with prices
- - Sizes with prices
-
-Submit button
-
-Show final pizza with total price.
-
-```
-
+Due to the length of the specifications I came up with, I've broken
+them out into their own separate file
+[planHowTheAppWorks.txt](https://github.com/k9w/pizza-parlor/blob/main/planHowTheAppWorks.txt).
 
 
 ### Tests
+
+_Next, I plan to re-write the tests below._
 
 ```
 Describe: Pizza Object Constructor
