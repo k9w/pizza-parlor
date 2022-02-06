@@ -19,7 +19,7 @@ as a student at [Epicodus](https://epicodus.com)!_
 [Here is the
 lesson](https://www.learnhowtoprogram.com/intermediate-javascript/object-oriented-javascript/object-oriented-javascript-independent-project)
 from [the curriculum](https://learnhowtoprogram.com) where I made this
-page on Friday January 28th 2022. Check out more of my work at:
+app on Friday January 28th 2022. Check out more of my work at:
 
  * https://github.com/k9w
 

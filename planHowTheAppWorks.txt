@@ -1,0 +1,25 @@
+This plaintext document outlines my thought process on a re-write of
+this application's Business Logic. I expect the User Interface Logic
+to only marginally change. Refer to the prior Git commit history for
+this app's first incarnation.
+
+
+Expected input:
+
+ - A size of pizza
+
+ - A topping (multiple toppings might be offered later as a new
+   feature)
+
+
+Expected output:
+
+ - A pizza with the size and topping chosen by the user, and a price
+   to buy it.
+
+
+To achieve that, do this:
+
+Define an object constructor Pizza with the following properties and
+possible values.
+
