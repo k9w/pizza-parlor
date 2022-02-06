@@ -4,6 +4,10 @@ to only marginally change. Refer to the Git commit history prior to
 Saturday February 5th 2022 for this app's first incarnation.
 
 
+
+Business Logic
+
+
 Expected input:
 
  - A size of pizza
@@ -22,4 +26,60 @@ To achieve that, do this:
 
 Define an object constructor Pizza with the following properties and
 possible values.
+
+ - Size: 12 inch for small, 18 inch for medium, or 24 inch for large
+
+ - Topping: cheese, pepperoni, artichoke, or anchovy
+
+ - Size price: $6 for small, $9 for medium, or $12 for large
+
+ - Topping price: $5 for cheese, $7 for pepperoni, $6 for artichoke,
+   or $7 for anchovy
+
+ - Total Price: the value of 'size price' plus the value of 'topping price'
+
+
+Define a method calculateTotalPrice with parameters sizeChoice and
+toppingChoice, from the UI Logic below, to calculate the total price.
+
+
+
+User Interface Logic
+
+
+HTML shows the following to the user:
+
+ - Header of 'Choose your Pizza'.
+
+ - Ask what size is wanted.
+ 
+ - Offer radio button for each size choice.
+
+ - Ask what topping is wanted.
+
+ - Offer radio button for each topping choice.
+
+ - Show submit and reset buttons.
+
+ - Show an empty result tag.
+
+
+In CSS, initially hide the result tag.
+
+
+After the page has loaded, run the UI JavaScript below:
+
+Run the code below on click of the 'submit' button.
+
+ - Prevent the default of the form result appearing and then quickly
+   disappearing.
+
+ - Empty the tag with id result.
+
+ - Store the value of size choice.
+
+ - Store the value of topping choice.
+
+ - Call the calculateTotalPrice method, in our Business Logic above,
+   and pass it the values of sizeChoice, and toppingChoice.
 
