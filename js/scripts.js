@@ -1,5 +1,15 @@
 /* Business Logic */
 
+function Pizza(sizeChosen, toppingChosen) {
+  this.size  = 0;
+  this.topping = [];
+  this.sizePrice = 0;
+  this.toppingPrice = 0;
+  this.totalPrice = 0;
+}
+
+// old business logic below to be rewritten
+
 Pizza.prototype.chooseSize = function() {
     switch (sizeOptions) {
   case ("small"):
