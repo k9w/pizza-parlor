@@ -44,6 +44,10 @@ possible values.
  - Total Price: the value of 'size price' plus the value of 'topping price'
 
 
+Instantiate a new object 'pizza' with the properties from the 'Pizza'
+constructor.
+
+
 Define a method calculateTotalPrice.
 
 Input parameters from the UI Logic: sizeChoice and toppingChoice
@@ -111,8 +115,8 @@ Run the code below on click of the 'submit' button.
 STRATEGY TO WRITE THE TESTS AND WRITE THE CODE
 
 
-Keep in mind this project uses manual tests, since we have not yet
-started learning automated testing with Jest for this Independent
+Keep in mind this project uses manual tests, since we are not expected
+to use automated testing with Jest for this Independent
 Project. Therefore I won't include the steps below of running the
 tests.
 
@@ -127,8 +131,7 @@ A commit is assumed after each bullet point below.
  - Code the method, its inputs, its actions, and its output.
 
 
-UI Logic does not need to be tested. HTML and CSS are not applicable
-to be tested.
+UI Logic, HTML, and CSS do not need to be tested.
 
  - Code the UI Logic.
 

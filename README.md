@@ -39,27 +39,25 @@ them out into their own separate file
 
 _Next, I plan to re-write the tests below._
 
-```
-Describe: Pizza Object Constructor
-Test: "It should template a pizza with properties: topping, size, price."
-Code:
-function Pizza() {
-  this.toppings = [];
-  this.size = 0;
-  this.price = 0;
-}
-Expected Output: A valid constructor with those properties.
-```
+#### Test 1
 
+Describe: Pizza Object Constructor
+
+Test: "It should define an object constructor 'Pizza' with properties:
+topping, size, price for each, and total price."
+
+Code:
 ```
-Describe: Choose topping
-Test: "It should return a list of chosen toppings."
-Code: 
-Pizza.prototype.chooseToppings = function() {
-  this.toppings = [];
+function Pizza(sizeChosen, toppingChosen) {
+  this.size  = 0;
+  this.topping = [];
+  this.sizePrice = 0;
+  this.toppingPrice = 0;
+  this.totalPrice = 0;
 }
-Expected Output: A list of toppings chosen.
 ```
+Expected Output: A valid constructor with those properties.
+
 
 ## Setup/Installation Requirements
 
