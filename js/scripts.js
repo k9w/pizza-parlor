@@ -29,22 +29,22 @@ Pizza.prototype.chooseSize = function() {
   }
 }
 
-Pizza.prototype.chooseToppings = function() {
+Pizza.prototype.chooseTopping = function() {
   switch (toppingOptions) {
   case ("cheese"):
-    toppingsChosen.push("cheese");
+    toppingChosen.push("cheese");
     totalPrice += 5;
     break;
   case ("pepperoni"):
-    toppingsChosen.push("pepperoni");
+    toppingChosen.push("pepperoni");
     totalPrice += 7;
     break;
   case ("artichoke"):
-    toppingsChosen.push("artichoke");
+    toppingChosen.push("artichoke");
     totalPrice += 7;
     break;
   case ("anchovy"):
-    toppingsChosen.push("anchovy");
+    toppingChosen.push("anchovy");
     totalPrice += 7;
     break;
   default:
@@ -66,10 +66,10 @@ $(document).ready(function() {
   $("form#questions").submit(function(event) {
     event.preventDefault();
     $("#result").empty();
-    let sizeChoice = $("input:radio[name=sizeChoice]:checked").val();
-    let toppingsChoice = $("input:radio[name=toppingsChoice]:checked").val();
+    let sizeChosen = $("input:radio[name=sizeChosen]:checked").val();
+    let toppingChosen = $("input:radio[name=toppingChosen]:checked").val();
     $("#result").show();
-    $("#result").append(orderPizza(sizeChoice, toppingsChoice));
+    $("#result").append(orderPizza(sizeChosen, toppingChosen));
     $("#result").append("Order placed!");
   });
 });

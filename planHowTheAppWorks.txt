@@ -30,18 +30,29 @@ BUSINESS LOGIC
 
 
 Define an object constructor Pizza with the following properties and
-possible values.
+empty values.
 
- - Size: 12 inch for small, 18 inch for medium, or 24 inch for large
+ - Size
 
- - Topping: cheese, pepperoni, artichoke, or anchovy
+ - Topping
 
- - Size price: $6 for small, $9 for medium, or $12 for large
+ - Size price
 
- - Topping price: $5 for cheese, $7 for pepperoni, $6 for artichoke,
-   or $7 for anchovy
+ - Topping price
 
- - Total Price: the value of 'size price' plus the value of 'topping price'
+ - Total Price
+
+
+Units for size and price will be added in the UI Logic.
+
+
+Define a Pizza method 'priceThePizzaSize'.
+
+Input: 	   Output:
+sizeChosen sizePrice
+12	   6
+18	   9
+24	   12
 
 
 Instantiate a new object 'pizza' with the properties from the 'Pizza'
@@ -50,11 +61,11 @@ constructor.
 
 Define a method calculateTotalPrice.
 
-Input parameters from the UI Logic: sizeChoice and toppingChoice
+Input parameters from the UI Logic: sizeChosen and toppingChosen
 
- - Find the sizePrice based on the sizeChoice.
+ - Find the sizePrice based on the sizeChosen.
 
- - Find the toppingPrice based on the toppingChoice.
+ - Find the toppingPrice based on the toppingChosen.
 
  - Find the totalPrice from the sum of sizePrice and toppingPrice.
 
@@ -98,16 +109,16 @@ Run the code below on click of the 'submit' button.
 
  - Empty the tag with id result.
 
- - Store the value of sizeChoice from the radio button checked.
+ - Store the value of sizeChosen from the radio button checked.
 
- - Store the value of toppingChoice from the radio button checked.
+ - Store the value of toppingChosen from the radio button checked.
 
  - Call the calculateTotalPrice method, in our Business Logic above,
-   and pass it the values of sizeChoice, and toppingChoice.
+   and pass it the values of sizeChosen, and toppingChosen.
 
  - Show the tag with id result.
 
- - Append to the result tag: sizeChoice, toppingChoice, and
+ - Append to the result tag: sizeChosen, toppingChosen, and
    totalPrice.
 
 
