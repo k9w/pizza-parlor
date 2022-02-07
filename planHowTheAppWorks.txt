@@ -48,11 +48,21 @@ Units for size and price will be added in the UI Logic.
 
 Define a Pizza method 'priceThePizzaSize'.
 
-Input: 	   Output:
-sizeChosen sizePrice
-12	   6
-18	   9
-24	   12
+Input: 	       	    Output:
+sizeChosen	    sizePrice
+12	   	    6
+18	   	    9
+24	   	    12
+
+
+Define a Pizza method 'priceThePizzaTopping'.
+
+Input: 	       	    Output:
+toppingChosen	    toppingPrice
+chese		    5
+pepperoni	    7
+artichoke	    6
+anchovy		    7
 
 
 Instantiate a new object 'pizza' with the properties from the 'Pizza'

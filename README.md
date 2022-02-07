@@ -60,7 +60,7 @@ Expected Output: A valid constructor with those properties.
 
 #### Test 2
 
-Describe: Method calculateTotalPrice
+Describe: Method priceThePizzaSize
 
 Test: "It should define a prototype method 'priceThePizzaSize' from constructor 'Pizza'."
 Code: 
@@ -76,7 +76,29 @@ Pizza.prototype.priceThePizzaSize = function(sizeChosen) {
   return sizePrice;
 }
 ```
-Expected Output: A list of toppings chosen.
+Expected Output: A pizza size chosen.
+
+#### Test 3
+
+Describe: Method priceThePizzaTopping
+
+Test: "It should define a prototype method 'priceThePizzaTopping' from constructor 'Pizza'."
+Code: 
+```
+Pizza.prototype.priceThePizzaTopping = function(toppingChosen) {
+  if ( toppingChosen === "cheese" ) {
+    let toppingPrice = 5;
+  } else if ( toppingChosen === "pepperoni" ) {
+    let toppingPrice = 7;
+  } else if ( toppingChosen === "artichoke" ) {
+    let toppingPrice = 6;
+  } else if ( toppingChosen === "anchovy" ) {
+    let toppingPrice = 7;
+  }
+  return sizePrice;
+}
+```
+Expected Output: A pizza size chosen.
 
 
 ## Setup/Installation Requirements
