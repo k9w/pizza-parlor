@@ -69,6 +69,13 @@ anchovy		    7
 Return the toppingPrice.
 
 
+Define a Pizza method 'priceTheWholePizza'.
+
+Input: sizePrice and toppingPrice
+
+Output: totalPrice
+
+
 Instantiate a new object 'pizza' with the properties from the 'Pizza'
 constructor.
 

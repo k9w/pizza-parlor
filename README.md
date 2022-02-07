@@ -100,7 +100,22 @@ Pizza.prototype.priceThePizzaTopping = function(toppingChosen) {
   return toppingPrice;
 }
 ```
-Expected Output: A pizza size chosen.
+Expected Output: A pizza topping chosen.
+
+#### Test 4
+
+Describe: Method priceTheWholePizza
+
+Test: "It should define a prototype method 'priceTheWholePizza' from constructor 'Pizza'."
+
+Code: 
+```
+Pizza.prototype.priceThePizzaTopping = function(sizeChosen, toppingChosen) {
+  let totalPrice = sizeChosen + toppingChosen;
+  return totalPrice;
+}
+```
+Expected Output: A total price for the pizza chosen.
 
 
 ## Setup/Installation Requirements
