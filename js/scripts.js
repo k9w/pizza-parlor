@@ -32,6 +32,12 @@ Pizza.prototype.priceThePizzaTopping = function(toppingChosen) {
   return toppingPrice;
 }
 
+Pizza.prototype.priceTheWholePizza = function(sizeChosen, toppingChosen) {
+  let totalPrice = sizeChosen + toppingChosen;
+  return totalPrice;
+}
+
+
 // old business logic below to be rewritten
 
 Pizza.prototype.chooseSize = function() {

@@ -110,7 +110,7 @@ Test: "It should define a prototype method 'priceTheWholePizza' from constructor
 
 Code: 
 ```
-Pizza.prototype.priceThePizzaTopping = function(sizeChosen, toppingChosen) {
+Pizza.prototype.priceTheWholePizza = function(sizeChosen, toppingChosen) {
   let totalPrice = sizeChosen + toppingChosen;
   return totalPrice;
 }
