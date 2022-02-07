@@ -8,6 +8,17 @@ function Pizza(sizeChosen, toppingChosen) {
   this.totalPrice = 0;
 }
 
+Pizza.prototype.priceThePizzaSize = function(sizeChosen) {
+  if ( sizeChosen === 12 ) {
+    let sizePrice = 6;
+  } else if ( sizeChosen === 18 ) {
+    let sizePrice = 9;
+  } else if ( sizeChosen === 24 ) {
+    let sizePrice = 12;
+  }
+  return sizePrice;
+}
+
 // old business logic below to be rewritten
 
 Pizza.prototype.chooseSize = function() {

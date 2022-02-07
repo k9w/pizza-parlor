@@ -61,6 +61,7 @@ Expected Output: A valid constructor with those properties.
 #### Test 2
 
 Describe: Method calculateTotalPrice
+
 Test: "It should define a prototype method 'priceThePizzaSize' from constructor 'Pizza'."
 Code: 
 ```
