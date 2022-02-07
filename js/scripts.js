@@ -9,32 +9,32 @@ function Pizza(sizeChosen, toppingChosen) {
 }
 
 Pizza.prototype.priceThePizzaSize = function(sizeChosen) {
-  if ( sizeChosen === 12 ) {
-    let sizePrice = 6;
-  } else if ( sizeChosen === 18 ) {
-    let sizePrice = 9;
-  } else if ( sizeChosen === 24 ) {
-    let sizePrice = 12;
+  if ( this.sizeChosen === 12 ) {
+    let this.sizePrice = 6;
+  } else if ( this.sizeChosen === 18 ) {
+    let this.sizePrice = 9;
+  } else if ( this.sizeChosen === 24 ) {
+    let this.sizePrice = 12;
   }
-  return sizePrice;
+  return this.sizePrice;
 }
 
 Pizza.prototype.priceThePizzaTopping = function(toppingChosen) {
-  if ( toppingChosen === "cheese" ) {
-    let toppingPrice = 5;
-  } else if ( toppingChosen === "pepperoni" ) {
-    let toppingPrice = 7;
-  } else if ( toppingChosen === "artichoke" ) {
-    let toppingPrice = 6;
-  } else if ( toppingChosen === "anchovy" ) {
-    let toppingPrice = 7;
+  if ( this.toppingChosen === "cheese" ) {
+    let this.toppingPrice = 5;
+  } else if ( this.toppingChosen === "pepperoni" ) {
+    let this.toppingPrice = 7;
+  } else if ( this.toppingChosen === "artichoke" ) {
+    let this.toppingPrice = 6;
+  } else if ( this.toppingChosen === "anchovy" ) {
+    let this.toppingPrice = 7;
   }
-  return toppingPrice;
+  return this.toppingPrice;
 }
 
 Pizza.prototype.priceTheWholePizza = function(sizeChosen, toppingChosen) {
-  let totalPrice = sizeChosen + toppingChosen;
-  return totalPrice;
+  let this.totalPrice = this.sizeChosen + this.toppingChosen;
+  return this.totalPrice;
 }
 
 
