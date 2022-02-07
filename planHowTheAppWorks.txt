@@ -76,10 +76,6 @@ Input: sizePrice and toppingPrice
 Output: totalPrice
 
 
-Instantiate a new object 'pizza' with the properties from the 'Pizza'
-constructor.
-
-
 Define a method calculateTotalPrice.
 
 Input parameters from the UI Logic: sizeChosen and toppingChosen
@@ -91,6 +87,36 @@ Input parameters from the UI Logic: sizeChosen and toppingChosen
  - Find the totalPrice from the sum of sizePrice and toppingPrice.
 
  - Return the totalPrice.
+
+
+
+USER INTERFACE LOGIC
+
+
+Instantiate a new object 'pizza' with the properties from the 'Pizza'
+constructor.
+
+
+After the page has loaded, run the UI JavaScript code below:
+
+Run the code below on click of the 'submit' button.
+
+ - Prevent the default of the form result appearing and then quickly
+   disappearing. This means keep the result displayed.
+
+ - Empty the tag with id result.
+
+ - Store the value of sizeChosen from the radio button checked.
+
+ - Store the value of toppingChosen from the radio button checked.
+
+ - Call the calculateTotalPrice method, in our Business Logic above,
+   and pass it the values of sizeChosen, and toppingChosen.
+
+ - Show the tag with id result.
+
+ - Append to the result tag: sizeChosen, toppingChosen, and
+   totalPrice.
 
 
 
@@ -115,32 +141,6 @@ HTML shows the following to the user:
 
 
 In CSS, initially hide the result tag.
-
-
-
-USER INTERFACE LOGIC
-
-
-After the page has loaded, run the UI JavaScript code below:
-
-Run the code below on click of the 'submit' button.
-
- - Prevent the default of the form result appearing and then quickly
-   disappearing. This means keep the result displayed.
-
- - Empty the tag with id result.
-
- - Store the value of sizeChosen from the radio button checked.
-
- - Store the value of toppingChosen from the radio button checked.
-
- - Call the calculateTotalPrice method, in our Business Logic above,
-   and pass it the values of sizeChosen, and toppingChosen.
-
- - Show the tag with id result.
-
- - Append to the result tag: sizeChosen, toppingChosen, and
-   totalPrice.
 
 
 
