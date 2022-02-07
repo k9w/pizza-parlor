@@ -19,6 +19,19 @@ Pizza.prototype.priceThePizzaSize = function(sizeChosen) {
   return sizePrice;
 }
 
+Pizza.prototype.priceThePizzaTopping = function(toppingChosen) {
+  if ( toppingChosen === "cheese" ) {
+    let toppingPrice = 5;
+  } else if ( toppingChosen === "pepperoni" ) {
+    let toppingPrice = 7;
+  } else if ( toppingChosen === "artichoke" ) {
+    let toppingPrice = 6;
+  } else if ( toppingChosen === "anchovy" ) {
+    let toppingPrice = 7;
+  }
+  return toppingPrice;
+}
+
 // old business logic below to be rewritten
 
 Pizza.prototype.chooseSize = function() {

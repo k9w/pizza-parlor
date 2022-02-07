@@ -54,6 +54,8 @@ sizeChosen	    sizePrice
 18	   	    9
 24	   	    12
 
+Return the sizePrice.
+
 
 Define a Pizza method 'priceThePizzaTopping'.
 
@@ -63,6 +65,8 @@ chese		    5
 pepperoni	    7
 artichoke	    6
 anchovy		    7
+
+Return the toppingPrice.
 
 
 Instantiate a new object 'pizza' with the properties from the 'Pizza'
