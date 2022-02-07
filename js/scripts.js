@@ -10,30 +10,30 @@ function Pizza(sizeChosen, toppingChosen) {
 
 Pizza.prototype.priceThePizzaSize = function(sizeChosen) {
   if ( this.sizeChosen === 12 ) {
-    let this.sizePrice = 6;
+    let sizePrice = 6;
   } else if ( this.sizeChosen === 18 ) {
-    let this.sizePrice = 9;
+    let sizePrice = 9;
   } else if ( this.sizeChosen === 24 ) {
-    let this.sizePrice = 12;
+    let sizePrice = 12;
   }
   return this.sizePrice;
 }
 
 Pizza.prototype.priceThePizzaTopping = function(toppingChosen) {
   if ( this.toppingChosen === "cheese" ) {
-    let this.toppingPrice = 5;
+    let toppingPrice = 5;
   } else if ( this.toppingChosen === "pepperoni" ) {
-    let this.toppingPrice = 7;
+    let toppingPrice = 7;
   } else if ( this.toppingChosen === "artichoke" ) {
-    let this.toppingPrice = 6;
+    let toppingPrice = 6;
   } else if ( this.toppingChosen === "anchovy" ) {
-    let this.toppingPrice = 7;
+    let toppingPrice = 7;
   }
   return this.toppingPrice;
 }
 
 Pizza.prototype.priceTheWholePizza = function(sizeChosen, toppingChosen) {
-  let this.totalPrice = this.sizeChosen + this.toppingChosen;
+  let totalPrice = this.sizeChosen + this.toppingChosen;
   return this.totalPrice;
 }
 
@@ -48,7 +48,7 @@ $(document).ready(function() {
     $("#result").empty();
     let sizeChosen = $("input:radio[name=sizeChosen]:checked").val();
     let toppingChosen = $("input:radio[name=toppingChosen]:checked").val();
-    sizeChosen.priceThePizzaSize;
+    priceThePizzaSize(sizeChosen);
     toppingChosen.priceThePizzaTopping;
     $("#result").show();
     $("#result").append(priceTheWholePizza(sizeChosen, toppingChosen));
