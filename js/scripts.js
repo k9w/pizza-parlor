@@ -3,62 +3,65 @@
 function Pizza(sizeChosen, toppingChosen) {
   this.sizeChosen = sizeChosen;
   this.toppingChosen = toppingChosen;
-  this.sizePrice = sizePrice;
-  this.toppingPrice = toppingPrice;
-  this.totalPrice = totalPrice;
+  this.sizePrice = 0;
+  this.toppingPrice = 0;
+  this.totalPrice = 0;
 }
 
-Pizza.prototype.priceThePizzaSize = function(sizeChosen) {
-  let sizePrice
-  if ( this.sizeChosen === 12 ) {
-    sizePrice = 6;
+/*
+
+pizza = {
+   sizeChosen: "large",
+   toppingChosen: "cheese",
+   sizePrice: 0,
+   toppingPrice: 0,
+   totalPrince: 0
+}
+
+pizza.priceThePizzaSize()
+
+*/
+
+Pizza.prototype.priceThePizzaSize = function() {
+  if ( this.sizeChosen === "small" ) {
+    this.sizePrice = 6;
   } else if ( this.sizeChosen === 18 ) {
-    sizePrice = 9;
+    this.sizePrice = 9;
   } else if ( this.sizeChosen === 24 ) {
-    sizePrice = 12;
+    this.sizePrice = 12;
   }
-  console.log(sizePrice);
-  return this.sizePrice;
 }
 
-Pizza.prototype.priceThePizzaTopping = function(toppingChosen) {
-  let toppingPrice
+Pizza.prototype.priceThePizzaTopping = function() {
   if ( this.toppingChosen === "cheese" ) {
-    toppingPrice = 5;
+    this.toppingPrice = 5;
   } else if ( this.toppingChosen === "pepperoni" ) {
-    toppingPrice = 7;
+    this.toppingPrice = 7;
   } else if ( this.toppingChosen === "artichoke" ) {
-    toppingPrice = 6;
+    this.toppingPrice = 6;
   } else if ( this.toppingChosen === "anchovy" ) {
-    toppingPrice = 7;
+    this.toppingPrice = 7;
   }
-  console.log(toppingPrice);
-  return this.toppingPrice;
 }
 
-Pizza.prototype.priceTheWholePizza = function(sizeChosen, toppingChosen) {
-  totalPrice = this.sizeChosen + this.toppingChosen;
-  return this.totalPrice;
+Pizza.prototype.priceTheWholePizza = function() {
+  this.totalPrice = this.sizePrice + this.toppingPrice;
 }
 
 
 /* User Interface Logic */
-
-let pizza = new Pizza();
 
 $(document).ready(function() {
   $("form#questions").submit(function(event) {
     event.preventDefault();
     $("#result").empty();
     let sizeChosen = $("input:radio[name=sizeChosen]:checked").val();
-    console.log(sizeChosen);
     let toppingChosen = $("input:radio[name=toppingChosen]:checked").val();
-    console.log(toppingChosen);
-    sizePrice = sizeChosen.priceThePizzaSize;
-    console.log(sizePrice);
-    toppingPrice = toppingChosen.priceThePizzaTopping;
-    console.log(toppingPrice);
+    let pizza = new Pizza(sizeChosen, toppingChosen);
+    pizza.priceThePizzaSize();
+    pizza.priceThePizzaTopping();
+    pizza.priceTheWholePizza();
     $("#result").show();
-    $("#result").append().priceTheWholePizza(sizePrice, toppingPrice);
+    $("#result").append(pizza.totalPrice);
   });
 });
