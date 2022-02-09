@@ -48,6 +48,6 @@ $(document).ready(function() {
     pizza.priceThePizzaTopping();
     pizza.priceTheWholePizza();
     $("#result").show();
-    $("#result").append(pizza.totalPrice);
+    $("#result").append("<p>Your pizza is $" + pizza.totalPrice + ".</p>");
   });
 });
