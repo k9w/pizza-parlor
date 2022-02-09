@@ -8,26 +8,12 @@ function Pizza(sizeChosen, toppingChosen) {
   this.totalPrice = 0;
 }
 
-/*
-
-pizza = {
-   sizeChosen: "large",
-   toppingChosen: "cheese",
-   sizePrice: 0,
-   toppingPrice: 0,
-   totalPrince: 0
-}
-
-pizza.priceThePizzaSize()
-
-*/
-
 Pizza.prototype.priceThePizzaSize = function() {
   if ( this.sizeChosen === "small" ) {
     this.sizePrice = 6;
-  } else if ( this.sizeChosen === 18 ) {
+  } else if ( this.sizeChosen === "medium" ) {
     this.sizePrice = 9;
-  } else if ( this.sizeChosen === 24 ) {
+  } else if ( this.sizeChosen === "large" ) {
     this.sizePrice = 12;
   }
 }
