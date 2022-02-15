@@ -23,21 +23,17 @@ this app on Friday January 28th 2022. Check out more of my work at:
 
  * https://github.com/k9w
 
-The Specifications section below describes my understanding of what the program
-should do.
 
-The Tests section outlines the tests as I implement them.
+### Planning for how the app works
 
-### Specifications
-
-Due to the length of the specifications I came up with, I've broken
-them out into their own separate file
+For Test-Driven Development, we are suppsed to write one test, commit
+it, and then write the code it's supposed to test, then commit it. But
+to know what tests and code to write a head of time, I brainstormed
+and planned how the app would work in the separate file
 [planHowTheAppWorks.txt](https://github.com/k9w/pizza-parlor/blob/main/planHowTheAppWorks.txt).
 
 
 ### Tests
-
-_Next, I plan to re-write the tests below._
 
 #### Test 1
 
@@ -49,8 +45,8 @@ topping, size, price for each, and total price."
 Code:
 ```
 function Pizza(sizeChosen, toppingChosen) {
-  this.size  = 0;
-  this.topping = [];
+  this.sizeChosen = sizeChosen;
+  this.toppingChosen = toppingChosen;
   this.sizePrice = 0;
   this.toppingPrice = 0;
   this.totalPrice = 0;
@@ -66,15 +62,14 @@ Test: "It should define a prototype method 'priceThePizzaSize' from constructor 
 
 Code: 
 ```
-Pizza.prototype.priceThePizzaSize = function(sizeChosen) {
-  if ( sizeChosen === 12 ) {
-    let sizePrice = 6;
-  } else if ( sizeChosen === 18 ) {
-    let sizePrice = 9;
-  } else if ( sizeChosen === 24 ) {
-    let sizePrice = 12;
+Pizza.prototype.priceThePizzaSize = function() {
+  if ( this.sizeChosen === "small" ) {
+    this.sizePrice = 6;
+  } else if ( this.sizeChosen === "medium" ) {
+    this.sizePrice = 9;
+  } else if ( this.sizeChosen === "large" ) {
+    this.sizePrice = 12;
   }
-  return sizePrice;
 }
 ```
 Expected Output: A pizza size chosen.
@@ -87,17 +82,16 @@ Test: "It should define a prototype method 'priceThePizzaTopping' from construct
 
 Code: 
 ```
-Pizza.prototype.priceThePizzaTopping = function(toppingChosen) {
-  if ( toppingChosen === "cheese" ) {
-    let toppingPrice = 5;
-  } else if ( toppingChosen === "pepperoni" ) {
-    let toppingPrice = 7;
-  } else if ( toppingChosen === "artichoke" ) {
-    let toppingPrice = 6;
-  } else if ( toppingChosen === "anchovy" ) {
-    let toppingPrice = 7;
+Pizza.prototype.priceThePizzaTopping = function() {
+  if ( this.toppingChosen === "cheese" ) {
+    this.toppingPrice = 5;
+  } else if ( this.toppingChosen === "pepperoni" ) {
+    this.toppingPrice = 7;
+  } else if ( this.toppingChosen === "artichoke" ) {
+    this.toppingPrice = 6;
+  } else if ( this.toppingChosen === "anchovy" ) {
+    this.toppingPrice = 7;
   }
-  return toppingPrice;
 }
 ```
 Expected Output: A pizza topping chosen.
@@ -110,9 +104,8 @@ Test: "It should define a prototype method 'priceTheWholePizza' from constructor
 
 Code: 
 ```
-Pizza.prototype.priceTheWholePizza = function(sizeChosen, toppingChosen) {
-  let totalPrice = sizeChosen + toppingChosen;
-  return totalPrice;
+Pizza.prototype.priceTheWholePizza = function() {
+  this.totalPrice = this.sizePrice + this.toppingPrice;
 }
 ```
 Expected Output: A total price for the pizza chosen.
